@@ -1,6 +1,13 @@
 <!--参考: https://github.com/k2works/sinatra_rakuten_api-->
 <div class="starter-template">
-  <h1>40代男性 のランキングTOP 30</h1>
+<%
+if @sex == 0 then
+  sexName = '男性'
+else
+  sexName = '女性'
+end
+%>
+  <h1><%= @age %>代<%= sexName %> のランキングTOP 30</h1>
     <table class="table table-hover">
       <tr>
         <th>商品名</th>
